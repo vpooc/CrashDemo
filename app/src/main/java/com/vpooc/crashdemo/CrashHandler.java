@@ -57,7 +57,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
 
 		// 重启Activity
 		Intent intent = new Intent(app, MainActivity.class);
-		PendingIntent p = PendingIntent.getActivity(app, 555, intent,Intent.FLAG_ACTIVITY_NEW_TASK);
+		PendingIntent p = PendingIntent.getActivity(app, 555, intent,PendingIntent.FLAG_ONE_SHOT);
 		// 稍等一会再重新起动
 		AlarmManager alarmManager = (AlarmManager) app
 				.getSystemService(Context.ALARM_SERVICE);
